@@ -4,7 +4,7 @@
             <x-jet-authentication-card-logo />
         </x-slot>
         <div class="container mx-auto">
-            <h3 class="pt-4 pb-5 text-4xl text-center">{{ __('Ingresar') }} </h3>  <!-- Centar y modificar -->
+            <h3 class="pt-4 pb-5 text-4xl text-center">{{ __('Ingresar') }} </h3>
         </div>
 
         <x-jet-validation-errors class="mb-4" />
