@@ -20,7 +20,7 @@
 
                 <div>
                     <x-jet-button type="submit">
-                        {{ __('Resend Verification Email') }}
+                        {{ __('Reenviar correo de verificación') }}
                     </x-jet-button>
                 </div>
             </form>
@@ -30,9 +30,9 @@
                     href="{{ route('profile.show') }}"
                     class="underline text-sm text-gray-600 hover:text-gray-900"
                 >
-                    {{ __('Edit Profile') }}</a>
+                    {{ __('Editar Perfil') }}</a>
 
-                <form method="POST" action="{{ route('logout') }}" class="inline">
+                <form method="POST" action="{{ route('Cerrar sesión') }}" class="inline">
                     @csrf
 
                     <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 ml-2">

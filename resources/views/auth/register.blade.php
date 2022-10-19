@@ -3,43 +3,45 @@
         <div class="card-header">
             <x-slot name="logo">
                 <x-jet-authentication-card-logo />
-                {{ __('Registro de nuevo usuario') }}
             </x-slot>
         </div>
-
+        <div class="container mx-auto">
+            <h1 class="pt-4 pb-15 text-center">{{ __('Registro de nuevo usuario') }} </h1>  <!-- Centar y modificar -->
+        </div>
         <x-jet-validation-errors class="mb-4" />
-
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
-            <div>
+            <div class="mt-2">
                 <x-jet-label for="name" value="{{ __('Nombre completo') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
-            <div>
+            <div class="mt-2">
                 <x-jet-label for="document" value="{{ __('Documento') }}" />
                 <x-jet-input id="document" class="block mt-1 w-full" type="text" name="document" :value="old('document')" required autofocus autocomplete="document" />
             </div>
 
-            <div class="mt-4">
+            <div class="mt-2">
                 <x-jet-label for="email" value="{{ __('Correo electrónico') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
-            <div>
+            <div class="mt-2">
                 <x-jet-label for="cellphone" value="{{ __('Numero celular') }}" />
-                <x-jet-input id="cellphone" class="block mt-1 w-full" type="text" name="cellphone" :value="old('cellphone')" required autofocus autocomplete="cellphone" />
+                <x-jet-input id="cellphone" class="block mt-1 w-full" type="text" name="cellphone" :value="old('cellphone')" required autofocus autocomplete="tel" />
             </div>
 
-            <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Contraseña') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            </div>
+            <div class="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2">
+                <div>
+                    <x-jet-label for="password" value="{{ __('Contraseña') }}" />
+                    <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
 
-            <div class="mt-4">
-                <x-jet-label for="password_confirmation" value="{{ __('Confirma Contraseña') }}" />
-                <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+                </div>
+                <div>
+                    <x-jet-label for="password_confirmation" value="{{ __('Confirma Contraseña') }}" />
+                    <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+                </div>
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
@@ -61,11 +63,11 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                    {{ __('Ya esta registrado?') }}
                 </a>
 
                 <x-jet-button class="ml-4">
-                    {{ __('Register') }}
+                    {{ __('Registrarse') }}
                 </x-jet-button>
             </div>
         </form>

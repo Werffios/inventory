@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    box-sizing: border-box;
+}
+:root{
+    --greenUnal: rgb(148, 180, 59);
+    --shadow: 0 5px 20px 0 rgba(0,0,0,.14),0 7px 12px -5px rgba(156,39,176,.46);
+}
+.logoUnal{
+    background-color:var(--greenUnal);
+    box-shadow: var(--shadow);
+    margin: 0;
+    padding: 0;
+}
+.st0{
+    fill:none;
+}
+.st1{
+    fill:#FFFFFF;
+}
