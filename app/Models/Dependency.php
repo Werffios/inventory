@@ -12,9 +12,6 @@ class Dependency extends Model
     protected $guarded = ['id'];
 
 
-
-
-
     // Relación uno a muchos
     public function elements()
     {

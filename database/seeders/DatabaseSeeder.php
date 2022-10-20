@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             DependencySeeder::class,
             TrademarkSeeder::class,
             UbicationSeeder::class,
-
+            ElementSeeder::class,
         ]);
     }
 }
