@@ -8,7 +8,7 @@
                     <button class="py-6 px-6 text-left text-gray-500 leading-4 tracking-wider">
                         Todos los elementos
                     </button>
-                    <!------------------------------------>
+                    
                     <div class="group mt-3">
                         <button class="flex items-center">
                             <span class="text-gray-500">Ubicación</span>
@@ -27,8 +27,6 @@
                         </ul>
                     </div>
 
-
-                    <!------------------------------------>
                 </div>
                 <table class="border-separate md:table-fixed mx-auto">
                     <thead>
