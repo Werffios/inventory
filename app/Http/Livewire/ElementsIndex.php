@@ -4,12 +4,40 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Element;
+use App\Models\Type;
+use App\Models\Dependency;
+use App\Models\Trademark;
+use App\Models\Ubication;
+use Livewire\WithPagination;
 
 class ElementsIndex extends Component
 {
+    use WithPagination;
+    public $type_id;
+    public $dependency_id;
+    public $trademark_id;
+    public $ubication_id;
     public function render()
     {
-        $elements = Element::all()->sortBy('name');
-        return view('livewire.elements-index', compact('elements'));
+        $types = Type::all();
+        $dependencies = Dependency::all();
+        $trademarks = Trademark::all();
+        $ubications = Ubication::all();
+
+
+
+        $elements = Element::latest('id')
+            ->type($this->type_id)
+            ->dependency($this->dependency_id)
+            ->trademark($this->trademark_id)
+            ->ubication($this->ubication_id)
+            ->paginate(20);
+        return view('livewire.elements-index', compact('elements', 'types', 'dependencies', 'trademarks', 'ubications'));
+
+
+    }
+    public function clear()
+    {
+        $this->reset(['type_id', 'dependency_id', 'trademark_id', 'ubication_id', 'search']);
     }
 }

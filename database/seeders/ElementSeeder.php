@@ -22,9 +22,9 @@ class ElementSeeder extends Seeder
             'dependency_id' => 1,
             'trademark_id' => 1,
             'ubication_id' => 1,
-            'serial' => 'Serial 1',
-            'model' => 'Model 1',
-            'features' => 'Features 1',
+            'serial' => '123456',
+            'model' => 'ABC123',
+            'features' => 'Element 1 features',
             'movable' => Element::STATUS_UNMOVABLE,
         ]);
         Element::create([
@@ -39,5 +39,7 @@ class ElementSeeder extends Seeder
             'features' => 'Features 2',
             'movable' => Element::STATUS_MOVABLE,
         ]);
+        Element::factory(40)->create();
+
     }
 }

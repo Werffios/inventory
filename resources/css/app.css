@@ -15,6 +15,10 @@
     margin: 0;
     padding: 0;
 }
+.bg-unal:hover{
+    background-color:var(--greenUnal);
+    color: rgb(107, 114, 128);
+}
 .st0{
     fill:none;
 }
