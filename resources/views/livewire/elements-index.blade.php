@@ -14,7 +14,7 @@
                     </div>
 
                     <div class="grid-col flex ml-auto pr-5">
-                        <div class="group mt-3">
+                        <div class="group my-auto pr-3">
                             <button class="flex items-center">
                                 <span class="text-gray-500">Ubicación</span>
                                 <span>
@@ -30,7 +30,7 @@
                             </ul>
                         </div>
 
-                        <div class="group mt-3">
+                        <div class="group my-auto pr-3">
                             <button class="flex items-center">
                                 <span class="text-gray-500">Dependencia</span>
                                 <span>
@@ -46,7 +46,7 @@
                             </ul>
                         </div>
 
-                        <div class="group mt-3">
+                        <div class="group my-auto pr-3">
                             <button class="flex items-center">
                                 <span class="text-gray-500">Marca</span>
                                 <span>
@@ -62,7 +62,7 @@
                             </ul>
                         </div>
 
-                        <div class="group mt-3">
+                        <div class="group my-auto">
                             <button class="flex items-center">
                                 <span class="text-gray-500">Tipo</span>
                                 <span>
@@ -82,33 +82,38 @@
                 <div class="table-wrapper">
                     <div class="md-card-content" style="overflow-x: auto;">
                         <table class="mx-auto" >
-                            <thead>
-                            <tr class="">
-                                <th class="py-3 text-center text-xs leading-4 text-gray-500 uppercase tracking-wider">Placa</th>
-                                <th class="py-3 text-center text-xs leading-4 text-gray-500 uppercase tracking-wider">Nombre</th>
-                                <th class="py-3 text-center text-xs leading-4 text-gray-500 uppercase tracking-wider">Serial</th>
-                                <th class="py-3 text-center text-xs leading-4 text-gray-500 uppercase tracking-wider">Modelo</th>
-                                <th class="py-3 text-center text-xs leading-4 text-gray-500 uppercase tracking-wider">Características</th>
-                                <th class="py-3 text-center text-xs leading-4 text-gray-500 uppercase tracking-wider">Movible</th>
-                                <th class="py-3 text-center text-xs leading-4 text-gray-500 uppercase tracking-wider">Marca</th>
-                                <th class="py-3 text-center text-xs leading-4 text-gray-500 uppercase tracking-wider">Tipo</th>
-                                <th class="py-3 text-center text-xs leading-4 text-gray-500 uppercase tracking-wider">Dependencia</th>
-                                <th class="py-3 text-center text-xs leading-4 text-gray-500 uppercase tracking-wider">Ubicación</th>
-                            </tr>
+                            <thead class="logoUnal">
+                                <tr>
+                                    <th class="w-1/6 py-3 text-center text-xs leading-4 text-white uppercase tracking-wider">Placa</th>
+                                    <th class="w-1/6 py-3 text-center text-xs leading-4 text-white uppercase tracking-wider">Nombre</th>
+                                    <th class="w-1/6 py-3 text-center text-xs leading-4 text-white uppercase tracking-wider">Serial</th>
+                                    <th class="w-1/6 py-3 text-center text-xs leading-4 text-white uppercase tracking-wider">Modelo</th>
+                                    <th class="w-1/6 py-3 text-center text-xs leading-4 text-white uppercase tracking-wider">Características</th>
+                                    <th class="w-1/6 py-3 text-center text-xs leading-4 text-white uppercase tracking-wider">Movible</th>
+                                    <th class="w-1/6 py-3 text-center text-xs leading-4 text-white uppercase tracking-wider">Marca</th>
+                                    <th class="w-1/6 py-3 text-center text-xs leading-4 text-white uppercase tracking-wider">Tipo</th>
+                                    <th class="w-1/6 py-3 text-center text-xs leading-4 text-white uppercase tracking-wider">Dependencia</th>
+                                    <th class="w-1/6 py-3 text-center text-xs leading-4 text-white uppercase tracking-wider">Ubicación</th>
+                                    <th class="w-1/6 py-3"></th>
+                                </tr>
                             </thead>
-                            <tbody class="mx-auto">
+                            <tbody>
                             @foreach($elements as $elemento)
                                 <tr>
-                                    <td class="px-6 py-4 text-sm text-center leading-4 text-gray-500">{{ $elemento->placa }}</td>
-                                    <td class="px-6 py-4 text-sm text-center leading-4 text-gray-500">{{ $elemento->name }}</td>
-                                    <td class="px-6 py-4 text-sm text-center leading-4 text-gray-500">{{ $elemento->serial }}</td>
-                                    <td class="px-6 py-4 text-sm text-center leading-4 text-gray-500">{{ $elemento->model }}</td>
-                                    <td class="px-6 py-4 text-sm text-center leading-4 text-gray-500">{{ $elemento->features }}</td>
-                                    <td class="px-6 py-4 text-sm text-center leading-4 text-gray-500">{{ $elemento->movable }}</td>
-                                    <td class="px-6 py-4 text-sm text-center leading-4 text-gray-500">{{ $elemento->trademark->name }}</td>
-                                    <td class="px-6 py-4 text-sm text-center leading-4 text-gray-500">{{ $elemento->type->name }}</td>
-                                    <td class="px-6 py-4 text-sm text-center leading-4 text-gray-500">{{ $elemento->dependency->name }}</td>
-                                    <td class="px-6 py-4 text-sm text-center leading-4 text-gray-500">{{ $elemento->ubication->name }}</td>
+                                    <td class="pl-5 py-2 text-sm text-center leading-4 text-gray-500">{{ $elemento->placa }}</td>
+                                    <td class="py-2 text-sm text-center leading-4 text-gray-500">{{ $elemento->name }}</td>
+                                    <td class="py-2 pr-3 text-sm text-center leading-4 text-gray-500">{{ $elemento->serial }}</td>
+                                    <td class="py-2 pl-2 text-sm text-center leading-4 text-gray-500">{{ $elemento->model }}</td>
+                                    <td class="py-2 text-sm text-center leading-4 text-gray-500">{{ $elemento->features }}</td>
+                                    <td class="py-2 text-sm text-center leading-4 text-gray-500">{{ $elemento->movable }}</td>
+                                    <td class="py-2 text-sm text-center leading-4 text-gray-500">{{ $elemento->trademark->name }}</td>
+                                    <td class="py-2 text-sm text-center leading-4 text-gray-500">{{ $elemento->type->name }}</td>
+                                    <td class="py-2 text-sm text-center leading-4 text-gray-500">{{ $elemento->dependency->name }}</td>
+                                    <td class="py-2 text-sm text-center leading-4 text-gray-500">{{ $elemento->ubication->name }}</td>
+                                    <td class="pr-5 py-2 text-sm text-center leading-4 text-gray-500"><a href="{{route('dashboard.show', $elemento->id)}}" id="search-button"><svg id="search-icon" class="search-icon" viewBox="0 0 24 24">
+                                                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                                                <path d="M0 0h24v24H0z" fill="none"/>
+                                            </svg></a></td>
                                 </tr>
                             @endforeach
                             </tbody>

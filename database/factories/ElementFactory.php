@@ -23,7 +23,7 @@ class ElementFactory extends Factory
     {
         return [
             'placa' => $this->faker->unique()->randomNumber(8),
-            'name' => $this->faker->sentence,
+            'name' => $this->faker->name,
             'serial' => $this->faker->unique()->randomNumber(8),
             'model' => $this->faker->unique()->randomNumber(8),
             'features' => $this->faker->sentence,

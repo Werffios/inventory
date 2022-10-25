@@ -25,3 +25,15 @@
 .st1{
     fill:#FFFFFF;
 }
+#search-button {
+    width: 25px;
+    height: 50px;
+}
+
+#search-button svg {
+    width: 25px;
+    height: 25px;
+}
+input:focus{
+    outline: none;
+}
