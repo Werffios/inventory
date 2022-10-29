@@ -13,8 +13,8 @@ class Element extends Model
 {
     use HasFactory;
 
-    const STATUS_MOVABLE = 'Si';
-    const STATUS_UNMOVABLE = 'No';
+    const STATUS_MOVABLE = true;
+    const STATUS_UNMOVABLE = false;
 
     protected $guarded = ['id'];
 

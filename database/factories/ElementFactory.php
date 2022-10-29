@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Element;
 use App\Models\Trademark;
 use App\Models\Type;
 use App\Models\Ubication;
@@ -27,7 +28,7 @@ class ElementFactory extends Factory
             'serial' => $this->faker->unique()->randomNumber(8),
             'model' => $this->faker->unique()->randomNumber(8),
             'features' => $this->faker->sentence,
-            'movable' => $this->faker->randomElement(['si', 'no']),
+            'movable' => $this->faker->boolean,
             'trademark_id' => Trademark::all()->random()->id,
             'type_id' => Type::all()->random()->id,
             'dependency_id' => Dependency::all()->random()->id,

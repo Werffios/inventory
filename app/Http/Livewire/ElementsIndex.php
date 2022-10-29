@@ -17,18 +17,20 @@ class ElementsIndex extends Component
     public $dependency_id;
     public $trademark_id;
     public $ubication_id;
-
+    public $open=true;
     public $search;
+    protected $listeners = ['elementCreated' => 'render'];
 
     public function render()
     {
-        $types = Type::all();
-        $dependencies = Dependency::all();
-        $trademarks = Trademark::all();
-        $ubications = Ubication::all();
+        $types = Type::all()->sortBy('name');
+        $dependencies = Dependency::all()->sortBy('name');
+        $trademarks = Trademark::all()->sortBy('name');
+        $ubications = Ubication::all()->sortBy('name');
 
 
-        $elements = Element::where('placa', 'like', '%' . $this->search . '%')
+        $elements = Element::latest('id')
+            ->where('placa', 'like',  $this->search . '%')
             ->type($this->type_id)
             ->dependency($this->dependency_id)
             ->trademark($this->trademark_id)

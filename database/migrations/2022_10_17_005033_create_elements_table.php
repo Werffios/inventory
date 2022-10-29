@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('serial');
             $table->string('model');
             $table->string('features');
-            $table->enum('movable', [Element::STATUS_MOVABLE, Element::STATUS_UNMOVABLE])->default(Element::STATUS_UNMOVABLE);   // "si, no" también pueden funcionar
+            $table->boolean('movable') ->default(Element::STATUS_UNMOVABLE);   // "si, no" también pueden funcionar
             $table->unsignedBigInteger('trademark_id')->nullable();
             $table->unsignedBigInteger('type_id')->nullable();
             $table->unsignedBigInteger('dependency_id')->nullable();
