@@ -19,7 +19,7 @@
 
             <div class="mt-2">
                 <x-jet-label for="document" value="{{ __('Documento') }}" />
-                <x-jet-input id="document" class="block mt-1 w-full" type="text" name="document" :value="old('document')" required autofocus autocomplete="document" />
+                <x-jet-input id="document" class="block mt-1 w-full" type="number" name="document" :value="old('document')" required autofocus autocomplete="document" />
             </div>
 
             <div class="mt-2">
@@ -29,10 +29,9 @@
 
             <div class="mt-2">
                 <x-jet-label for="cellphone" value="{{ __('Numero celular') }}" />
-                <x-jet-input id="cellphone" class="block mt-1 w-full" type="text" name="cellphone" :value="old('cellphone')" required autofocus autocomplete="tel" />
+                <x-jet-input id="cellphone" class="block mt-1 w-full" type="number" name="cellphone" :value="old('cellphone')" required autofocus autocomplete="tel" />
             </div>
 
-            <div class="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div>
                     <x-jet-label for="password" value="{{ __('Contraseña') }}" />
                     <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
@@ -42,7 +41,6 @@
                     <x-jet-label for="password_confirmation" value="{{ __('Confirma Contraseña') }}" />
                     <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
                 </div>
-            </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">

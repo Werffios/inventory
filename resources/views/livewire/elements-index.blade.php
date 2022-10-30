@@ -3,7 +3,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-gray-50 shadow-xl sm:rounded-xl mb-6">
-                <div class="flex">
+                <div class="flex overflow-hidden">
                     <x-jet-input wire:model="search" class="bg-gray-50 px-6 text-xl py-3 flex-1" placeholder="Buscar Elementos..."/>
                     @livewire('create-element')
                 </div>

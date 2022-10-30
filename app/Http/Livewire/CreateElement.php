@@ -25,12 +25,15 @@ class CreateElement extends Component
     public function create()
     {
         $this->validate([
+            'placa' => 'required|unique:elements|min:8|max:8',
+            'name' => 'required|min:3|max:50',
+            'serial' => 'required',
+            'model' => 'required|max:4',
+            'features' => 'required',
             'type_id' => 'required',
             'dependency_id' => 'required',
             'trademark_id' => 'required',
-            'ubication_id' => 'required',
-            'placa' => 'required',
-            'serial' => 'required'
+            'ubication_id' => 'required'
         ]);
 
         Element::create([
@@ -46,8 +49,6 @@ class CreateElement extends Component
             'ubication_id' => $this->ubication_id,
             'dependency_id' => $this->dependency_id
         ]);
-
-
 
         $this->reset(['open', 'type_id', 'dependency_id', 'trademark_id', 'ubication_id', 'placa', 'serial', 'description', 'name', 'model', 'movable', 'features']);
         $this->emit('elementCreated');

@@ -36,6 +36,7 @@ class ElementsIndex extends Component
             ->trademark($this->trademark_id)
             ->ubication($this->ubication_id)
             ->paginate(20);
+
         return view('livewire.elements-index', compact('elements', 'types', 'dependencies', 'trademarks', 'ubications'));
 
 
